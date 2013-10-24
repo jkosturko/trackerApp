@@ -105,8 +105,8 @@ module.exports = function(grunt) {
     copy: {
       release: {
         files: [
-          { src: ["app/**"], dest: "dist/" },
-          { src: "vendor/**", dest: "dist/" }
+          { src: "vendor/**", dest: "dist/" },
+          { src: "app/**", dest: "dist/" }
         ]
       }
     },
@@ -210,6 +210,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-bbb-requirejs");
   grunt.loadNpmTasks("grunt-bbb-styles");
 
+  // Run JSHint and a quick test.
+  grunt.registerTask("test", [
+    "jshint",
+    "karma:run",
+  ]);
+
   // When running the default Grunt command, just lint the code.
   grunt.registerTask("default", [
     "clean",
@@ -219,5 +225,7 @@ module.exports = function(grunt) {
     "requirejs",
     "styles",
     "cssmin",
+    // Compresses your application to a static GZip file.
+    //"compress",
   ]);
 };

@@ -1,5 +1,3 @@
-// This is the runtime configuration file.  It complements the Gruntfile.js by
-// supplementing shared properties.
 require.config({
   paths: {
     // Make vendor easier to access.
@@ -10,6 +8,12 @@ require.config({
 
     // Opt for Lo-Dash Underscore compatibility build over Underscore.
     "underscore": "../vendor/bower/lodash/dist/lodash.underscore",
+
+    // Map `lodash` to a valid location for the template loader plugin.
+    "lodash": "../vendor/bower/lodash/dist/lodash",
+
+    // Use the Lo-Dash template loader.
+    "ldsh": "../vendor/bower/lodash-template-loader/loader",
 
     // Map remaining vendor dependencies.
     "jquery": "../vendor/bower/jquery/jquery",
