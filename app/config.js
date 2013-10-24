@@ -30,5 +30,9 @@ require.config({
       // This maps the global `Backbone` object to `require("backbone")`.
       exports: "Backbone"
     }
+  },
+
+  lodashLoader: {
+    root: "/app/templates"
   }
 });
