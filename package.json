@@ -1,7 +1,6 @@
 {
   "name": "backbone-boilerplate",
   "version": "1.0.0",
-
   "devDependencies": {
     "grunt": "~0.4.1",
     "bbb": "~0.2.0",
@@ -17,17 +16,21 @@
     "karma-mocha": "~0.1.0",
     "karma-qunit": "~0.1.0",
     "karma-phantomjs-launcher": "~0.1.0",
-    "karma-coverage": "~0.1.0"
+    "karma-coverage": "~0.1.0",
+    "grunt-express-server": "~0.4.11"
   },
-
   "peerDependencies": {
     "generator-bbb": "*",
     "bower": "*",
     "grunt-cli": "*",
     "coveralls": "*"
   },
-
   "scripts": {
     "test": "grunt karma:run coveralls"
+  },
+  "dependencies": {
+    "grunt-bbb-requirejs": "0.1.0-alpha.8",
+    "grunt-bbb-server": "0.1.0-alpha.13",
+    "grunt-bbb-styles": "0.1.0-alpha.5"
   }
 }

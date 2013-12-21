@@ -12,3 +12,8 @@ require(["config"], function() {
     Backbone.history.start({ pushState: true, root: app.root });
   });
 });
+
+
+require([
+  'instances/myview'
+]);
