@@ -1,6 +1,8 @@
 module.exports = function(grunt) {
   "use strict";
 
+  require('load-grunt-tasks')(grunt);
+
   grunt.initConfig({
     // Wipe out previous builds and test reporting.
     clean: ["dist/", "test/reports"],
@@ -45,10 +47,10 @@ module.exports = function(grunt) {
     // projects.  Instead of manually specifying your stylesheets inside the
     // HTML, you can use `@imports` and this task will concatenate only those
     // paths.
-    styles: {
+    templates: {
       // Out the concatenated contents of the following styles into the below
       // development file path.
-      "dist/styles.css": {
+      "dist/templates.css": {
         // Point this to where your `index.css` file is location.
         src: "app/styles/index.css",
 
@@ -60,6 +62,7 @@ module.exports = function(grunt) {
         forceRelative: "/app/img/"
       }
     },
+
 
     // Minfiy the distribution CSS.
     cssmin: {

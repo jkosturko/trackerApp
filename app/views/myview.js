@@ -14,16 +14,22 @@
 define([
 	'underscore',
 	'jquery',
-	'backbone'
-], function (_, $, backbone) {
+	'backbone',
+    'text!templates/checkbox'
+], function (_, $, backbone, Templates) {
 	'use strict';
 
-	el: $container;
-
 	var View = Backbone.View.extend ({
+		el: '#counter',
+
 		initialize: function() {
-			console.log('Hello World');
-		}
+            this.render();
+		},
+
+        render: function() {
+           // var html = templates.checkBox({columns: 5});
+            //this.$el.html(html);
+        }
 	});
 
 	return View;

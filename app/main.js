@@ -15,5 +15,6 @@ require(["config"], function() {
 
 
 require([
-  'instances/myview'
+  'instances/myview',
+  'templates'
 ]);

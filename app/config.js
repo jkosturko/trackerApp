@@ -13,7 +13,10 @@ require.config({
 
     // Map remaining vendor dependencies.
     "jquery": "../vendor/bower/jquery/jquery",
-    "backbone": "../vendor/bower/backbone/backbone"
+    "backbone": "../vendor/bower/backbone/backbone",
+
+    "templates": "templates"
+
   },
 
   shim: {
